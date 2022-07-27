@@ -1,0 +1,42 @@
+.container.open{
+    .mobile-navigation{
+        .hamburger-icon{
+            > span:first-child{ transform: rotate(45deg);}
+            > span:nth-child(2){opacity: 0;}
+            > span:last-child{ transform: rotate(-45deg);}
+        }
+    }
+}
+
+.mobile-navigation{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5.4rem;
+    .hamburger-icon{
+        cursor: pointer;
+       > span{
+         display: block;
+         width: 25px;
+         height: 2px;
+         background: #000;
+         transform-origin: 3px 1px;
+         transition: all .3s;
+         cursor: pointer;
+         &:not(:last-child){
+            margin-block-end: .5rem;
+        }
+       }
+
+    }
+    .profile-pic{
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            transform: scale(.9);
+        }
+    }
+}

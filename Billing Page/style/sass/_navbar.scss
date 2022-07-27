@@ -1,0 +1,104 @@
+.header{
+    flex-shrink: 0;
+    flex-basis: 17%;
+    padding-inline: 1.7rem;
+    padding-block: 6.4rem 4.4rem;
+   
+
+    
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        // border: 2px solid red;
+        height: 100%;
+           
+    
+       .profile{
+           padding-inline-start: 1.7rem;
+           display: flex;
+           align-items: center;
+           &__img{
+               img{
+                   width: 4.5rem;
+               }
+           }
+           &__text{
+               margin-inline-start: .8rem;
+               color: $blue;
+               &-name{
+                   font-size: clamp(1.3rem,.5rem + 1vw ,$font-semi-medium);
+                   font-weight: 700;
+                   line-height: 1.2;
+   
+               }
+               &-username{
+                   font-size: $font-small;
+                   color: $grayish;
+                   font-weight: 400;
+               }
+   
+           }
+       }
+       .menu{
+           padding-block-start: 6.1rem;
+           &__links{
+           padding-inline-start: 1.7rem;
+           margin-block: 1rem;
+           display: flex;
+           align-items: center;
+           padding: .8rem 1.2rem;
+           position: relative;
+
+           &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: .4rem;
+            opacity: 0;
+            height: 100%;
+            border-radius: 1rem;
+            background-color: $red;
+            transition: all .2s
+           }
+           &:hover{
+            &::before{
+             opacity: 1;    
+            }
+           }
+           
+          }
+           img{
+            width: 2.4rem;
+           }
+           a{
+            display: inline-block;
+            padding-inline-start: .8rem;
+            font-size: $font-small;
+            transition: .3s all;
+           }
+   
+           }
+       
+       .logout{
+           margin-block-start: auto;
+           display: flex;
+           align-items: center;
+           img{
+            width: 2.4rem;
+           }
+           a{
+            display: inline-block;
+            padding-inline-start: .8rem;
+            font-size: $font-small;
+            transition: all .3s;
+            &:hover{
+                color: $red;
+            }
+           }
+
+       }
+    }
+}
+
